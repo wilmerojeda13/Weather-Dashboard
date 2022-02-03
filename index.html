@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>Weather Dasboard</title>
+</head>
+<body>
+    <header class="container-fluid text-center text-white bg-info p-2 ">
+        <h1>Weather Dasboard</h1>
+    </header>
+    <!--Create a container that includes an input type with an id with the search bar-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 bg-light">
+                <h5 class="mt-1">Search for a City:</h5>
+                <div class="input-group mb-3">
+                    <input id="enter-city" type="text" class="form-control" placeholder="Enter a city" aria-label="Enter a city">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <!--Create a button to clear the history data-->
+                <button class="btn btn-primary mb-3" type="button" id="clear-history">Clear history</button>
+                <form id="history"></form>
+            </div>
+            <!--Create a row with specifics class and id's that going to show in browser when the script is applied-->
+            <div class="col-lg-9">
+                <div class="row mr-0">
+                    <div class="col-lg-11 card m-3 d-none" id="today-weather">
+                        <div class="card-body">
+                            <h3 id="city-name" class="city-name align-middle"></h3>
+                            <img id="current-pic" alt="">
+                            <p id="temperature"></p>
+                            <p id="humidity"></p>
+                            <p id="wind-speed"></p>
+                            <p id="UV-index"></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+</body>
+</html>
