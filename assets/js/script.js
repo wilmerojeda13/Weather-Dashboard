@@ -15,6 +15,9 @@ function initPage() {
     var todayweatherEl = document.getElementById("today-weather");
     let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 
+    // Assigning an API key to a variable
+    const APIKey = "84b79da5e5d7c92085660485702f4ce8";
+
 
 
 
