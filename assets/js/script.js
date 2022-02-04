@@ -44,6 +44,21 @@ function initPage() {
                 axios.get(UVQueryURL)
                     .then(function (response) {
                         let UVIndex = document.createElement("span");
+
+                         //  Create response with a loop  to display forecast for next 5 days
+                         const forecastEls = document.querySelectorAll(".forecast");
+                         for (i = 0; i < forecastEls.length; i++) {
+                             forecastEls[i].innerHTML = "";
+                             const forecastIndex = i * 8 + 4;
+                             const forecastDate = new Date(response.data.list[forecastIndex].dt * 1000);
+                             const forecastDay = forecastDate.getDate();
+                             const forecastMonth = forecastDate.getMonth() + 1;
+                             const forecastYear = forecastDate.getFullYear();
+                             const forecastDateEl = document.createElement("p");
+                             forecastDateEl.setAttribute("class", "mt-3 mb-0 forecast-date");
+                             forecastDateEl.innerHTML = forecastMonth + "/" + forecastDay + "/" + forecastYear;
+                             forecastEls[i].append(forecastDateEl);
+ 
                 
 
 
