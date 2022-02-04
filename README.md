@@ -23,4 +23,4 @@
 - Screenshot 
 
 ## Screenshots
-![ScreenShot] 
+![ScreenShot] (https://github.com/wilmerojeda13/Weather-Dashboard/blob/main/assets/images/Screenshot1.png)
